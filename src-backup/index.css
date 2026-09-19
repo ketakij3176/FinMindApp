@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: #EDE4D3;
+  font-family: 'Inter', sans-serif;
+}
+
+.fm-app ::-webkit-scrollbar {
+  display: none;
+}
+.fm-app {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.fm-app input,
+.fm-app select,
+.fm-app textarea {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes fmFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fmDot {
+  0%, 80%, 100% { transform: scale(0.6); opacity: .4; }
+  40% { transform: scale(1); opacity: 1; }
+}
+@keyframes fmSlideUp {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+.fm-msg { animation: fmFadeIn .25s ease both; }
+.fm-dot { animation: fmDot 1.2s infinite ease-in-out; }
+.fm-panel { animation: fmSlideUp .28s cubic-bezier(.32,.72,0,1) both; }
